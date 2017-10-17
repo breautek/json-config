@@ -18,6 +18,7 @@
   "bugs": {
     "url": "https://github.com/breautek/json-config/issues"
   },
+  "preferGlobal": true,
   "homepage": "https://github.com/breautek/json-config#readme",
   "dependencies": {
     "commander": "^2.11.0"
