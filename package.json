@@ -1,11 +1,17 @@
 {
   "name": "@breautek/json-config",
   "version": "0.0.1",
-  "description": "",
+  "description": "A command line tool that accepts a simple environment-sensitive JSON template file used to generate a config JSON file, typically used as a part of a greater build system.",
   "main": "json-config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+	"json",
+	"config",
+	"build",
+	"tool"
+  ],
   "bin": {
     "json-config" : "./json-config"
   },
