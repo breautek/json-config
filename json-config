@@ -5,6 +5,9 @@
 var program = require('commander');
 var pkg = require('./package.json');
 var FileSystem = require('fs');
+var Path = require('path');
+
+var cwd = process.cwd();
 
 program.version(pkg.version)
 	   .option('-c, --config [optional]', 'Config file. Defaults to ./config.json', './config.json')
@@ -21,7 +24,7 @@ if (!env) {
 	process.exit();
 }
 
-var ic = require(inConfig);
+var ic = require(Path.resolve(cwd, inConfig));
 
 function parseConfig(c, env) {
 	var o = {};
@@ -58,4 +61,4 @@ function parseConfig(c, env) {
 
 var config = parseConfig(ic, env);
 
-FileSystem.writeFileSync(outConfig, JSON.stringify(config, null, 4));
+FileSystem.writeFileSync(Path.resolve(cwd, outConfig), JSON.stringify(config, null, 4));
