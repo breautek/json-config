@@ -1,0 +1,21 @@
+{
+	"name" : "this should be kept the same",
+	"dev:var1": "this should only be here during dev",
+	"dev:debug": true,
+	"staging:debug": true,
+	"prod:debug": false,
+
+	"db" : {
+		"dev:host": "127.0.0.1",
+		"staging:host" : "staging.com",
+		"prod:host": "prod.com",
+
+		"dev:user": "devuser",
+		"staging:user": "stagingUser",
+		"prod:user": "prodUser",
+
+		"innerObjectTest": {
+			"yahhh": "booiii"
+		}
+	}
+}
